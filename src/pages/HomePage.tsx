@@ -20,8 +20,9 @@ const HomePage: React.FC = () => {
     console.log(songQuery);
     setLoading(true);
     try {
+      // const response = await axios.get('http://localhost:8000/generate-playlist', {
       const response = await axios.get('https://playlisting-be.onrender.com/generate-playlist', {
-        params: {
+          params: {
           songQuery: songQuery
         }
       });
