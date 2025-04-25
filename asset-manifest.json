@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/playlisting-fe/static/css/main.dde9b7aa.css",
+    "main.js": "/playlisting-fe/static/js/main.1b2dbd22.js",
+    "index.html": "/playlisting-fe/index.html",
+    "main.dde9b7aa.css.map": "/playlisting-fe/static/css/main.dde9b7aa.css.map",
+    "main.1b2dbd22.js.map": "/playlisting-fe/static/js/main.1b2dbd22.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dde9b7aa.css",
+    "static/js/main.1b2dbd22.js"
+  ]
+}
