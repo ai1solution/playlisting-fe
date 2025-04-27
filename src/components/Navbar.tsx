@@ -36,23 +36,31 @@ const Navbar: React.FC = () => {
         </Box>
         
         {/* Center with app title */}
-        <Typography 
-          variant="h4"
-          component="div" 
-          sx={{ 
-            flexGrow: 1, 
-            textAlign: "center",
-          }}
-          className="museomoderno-title"
-        >
-          PLAYLISTING
-          <Typography
-            variant="subtitle2"
-            className="leckerli-one-regular"
+        <IconButton
+            color="inherit"
+            component={RouterLink}
+            to="/home"
+            edge="end"
+            aria-label="profile"
           >
-            made easier
+          <Typography 
+            variant="h4"
+            component="div" 
+            sx={{ 
+              flexGrow: 1, 
+              textAlign: "center",
+            }}
+            className="museomoderno-title"
+          >
+            PLAYLISTING
+            <Typography
+              variant="subtitle2"
+              className="leckerli-one-regular"
+            >
+              made easier
+            </Typography>
           </Typography>
-        </Typography>
+        </IconButton>
         
         {/* Right side with About icon */}
         <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
