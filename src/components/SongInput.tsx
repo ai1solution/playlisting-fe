@@ -9,7 +9,7 @@ const SongInput: React.FC<SongInputProps> = ({ inputFunction }) => {
   return (
     <TextField
       label="Enter songs"
-      placeholder="Let it be, Hotel California'"
+      placeholder="Let it be, Hotel California"
       onChange={inputFunction}
     //   variant="outlined"
       variant="filled"
