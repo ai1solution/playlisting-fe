@@ -4,9 +4,10 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 interface LinkBoxWithCopyProps {
   url: string;
+  name: string;
 }
 
-const LinkBoxWithCopy: React.FC<LinkBoxWithCopyProps> = ({ url }) => {
+const LinkBoxWithCopy: React.FC<LinkBoxWithCopyProps> = ({ url, name }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -22,13 +23,15 @@ const LinkBoxWithCopy: React.FC<LinkBoxWithCopyProps> = ({ url }) => {
     <>
       <Box
         sx={{
-          border: '1px solid #ccc',
           borderRadius: 2,
-          padding: 2,
+          paddingX: 4,
+          paddingY: {
+            md: 2
+          },
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          backgroundColor: '#f9f9f9',
+          backgroundColor: 'rgba(0, 0, 0, 0.2)',
         }}
       >
         <Typography
@@ -37,7 +40,7 @@ const LinkBoxWithCopy: React.FC<LinkBoxWithCopyProps> = ({ url }) => {
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            color: '#1976d2',
+            color: '#FFFFFF',
             textDecoration: 'none',
             overflow: 'hidden',
             textOverflow: 'ellipsis',
@@ -46,12 +49,24 @@ const LinkBoxWithCopy: React.FC<LinkBoxWithCopyProps> = ({ url }) => {
             marginRight: 1,
           }}
         >
-          {url}
+          {name}
         </Typography>
 
         <Tooltip title="Copy to clipboard">
           <IconButton onClick={handleCopy}>
-            <ContentCopyIcon />
+          <ContentCopyIcon 
+            style={{
+              color: '#3bb371'
+            }}
+          />
+            <Typography
+              style={{
+                marginLeft: '4px',
+                color: '#3bb371'
+              }}
+            >
+              Copy link
+            </Typography>
           </IconButton>
         </Tooltip>
       </Box>

@@ -21,9 +21,11 @@ const HomeIcon = () => (
 
 const Navbar: React.FC = () => {
   return (
-    <AppBar position="static" sx={{
-      paddingY: 1
-    }}>
+    <AppBar
+      sx={{
+        paddingY: 1,
+      }}
+    >
       <Toolbar>
         {/* Left side with Home icon */}
         <Box sx={{ flexGrow: 1, opacity: 0}}>
@@ -31,31 +33,33 @@ const Navbar: React.FC = () => {
         </Box>
         
         {/* Center with app title */}
-        <IconButton
-            color="inherit"
-            component={RouterLink}
-            to="/home"
-            edge="end"
-            aria-label="profile"
-          >
-          <Typography 
-            variant="h4"
-            component="div" 
-            sx={{ 
-              flexGrow: 1, 
-              textAlign: "center",
-            }}
-            className="museomoderno-title"
-          >
-            PLAYLISTING
-            <Typography
-              variant="subtitle2"
-              className="leckerli-one-regular"
+        <Box>
+          <IconButton
+              color="inherit"
+              component={RouterLink}
+              to="/home"
+              edge="end"
+              aria-label="profile"
             >
-              made easier
+            <Typography 
+              variant="h4"
+              component="div" 
+              sx={{ 
+                flexGrow: 1, 
+                textAlign: "center",
+              }}
+              className="museomoderno-title"
+            >
+              PLAYLISTING
+              <Typography
+                variant="subtitle2"
+                className="leckerli-one-regular"
+              >
+                made easier
+              </Typography>
             </Typography>
-          </Typography>
-        </IconButton>
+          </IconButton>
+        </Box>
         
         {/* Right side with About icon */}
         <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>

@@ -11,6 +11,7 @@ import SongInput from "../components/SongInput";
 const HomePage: React.FC = () => {
   const [songQuery, setSongQuery] = useState("");
   const [playlistLink, setPlaylistLink] = useState("");
+  const [playlistName, setPlaylistName] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSongQueryUpdate = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,6 +29,7 @@ const HomePage: React.FC = () => {
         }
       });
       setPlaylistLink(response.data.playlist_href)
+      setPlaylistName(response.data.name)
       console.log(response.data);
     } catch (error) {
       console.error('Error:', error);
@@ -41,7 +43,10 @@ const HomePage: React.FC = () => {
         elevation={3}
         className='no-border'
         sx={{
-          height: '94vh',
+          height: {
+            xs: '70vh',
+            md: '100vh'
+          },
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -66,8 +71,8 @@ const HomePage: React.FC = () => {
             justifyContent: 'center',
             alignItems: 'center',
             marginTop: {
-              xs: '-200px',
-              md: '-400px'
+              xs: '150px',
+              md: '-100px'
             }
           }}
         >
@@ -148,7 +153,7 @@ const HomePage: React.FC = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          paddingTop: '80px'
+          paddingTop: '40px'
         }}>
           <SongInput inputFunction={handleSongQueryUpdate} />
            <Button
@@ -166,7 +171,7 @@ const HomePage: React.FC = () => {
           >
             PLAYLIST IT
           </Button>
-          {playlistLink && <LinkBoxWithCopy url={playlistLink} />}
+          {playlistLink && <LinkBoxWithCopy url={playlistLink} name={playlistName}/>}
           {loading && <CircularProgress />}
         </Box>
       </Paper>
