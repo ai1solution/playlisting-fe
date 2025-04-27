@@ -176,7 +176,7 @@ const HomePage: React.FC = () => {
           height: '50vh',
           display: 'flex',
           alignItems: 'center',
-          backgroundImage: 'url("/backgrounds/about_bg.png")', // net one
+          backgroundImage: 'url("/backgrounds/about_bg.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'left',
           backgroundRepeat: 'no-repeat'
