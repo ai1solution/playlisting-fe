@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Box, Paper, Button } from '@mui/material';
-import '../styles/HomePage.css';
+import '../styles/Homepage.css';
 import axios from 'axios';
 import { useState } from 'react';
 import LinkBoxWithCopy from '../components/LinkBoxWithCopy'

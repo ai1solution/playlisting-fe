@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import '../styles/HomePage.css';
+import '../styles/Homepage.css';
 
 export default function TemporaryDrawer() {
   const [open, setOpen] = React.useState(false);
