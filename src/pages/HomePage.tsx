@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
         className='no-border'
         sx={{
           height: {
-            xs: '70vh',
+            xs: '85vh',
             md: '100vh'
           },
           display: 'flex',
