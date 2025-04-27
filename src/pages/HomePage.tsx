@@ -1,19 +1,20 @@
 import React from 'react';
-import { TextField, Box, Paper, Button } from '@mui/material';
-import '../styles/Homepage.css';
+import { Typography, Box, Paper, Button } from '@mui/material';
+import '../styles/HomePage.css';
 import axios from 'axios';
 import { useState } from 'react';
 import LinkBoxWithCopy from '../components/LinkBoxWithCopy'
 import AboutUs from "../components/AboutUs"
 import CircularProgress from '@mui/material/CircularProgress';
+import SongInput from "../components/SongInput";
 
 const HomePage: React.FC = () => {
   const [songQuery, setSongQuery] = useState("");
   const [playlistLink, setPlaylistLink] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSongQueryUpdate = (updatedQuery: string) => {
-    setSongQuery(updatedQuery);
+  const handleSongQueryUpdate = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSongQuery(event.target.value);
   };
 
   const handleCreatePlaylist = async () => {
@@ -38,9 +39,11 @@ const HomePage: React.FC = () => {
     <>
       <Paper
         elevation={3}
+        className='no-border'
         sx={{
           height: '94vh',
           display: 'flex',
+          flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
           // backgroundImage: 'url(https://images.unsplash.com/photo-1692061119126-78de8a398628?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)', // Ipod one
@@ -52,36 +55,112 @@ const HomePage: React.FC = () => {
           backgroundRepeat: 'no-repeat',
         }}
       >
+        <Box
+          sx={{
+            width: {
+              sm: '80%',
+              md: '50%',
+            },
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: {
+              xs: '-200px',
+              md: '-400px'
+            }
+          }}
+        >
+          <Typography
+            variant="h1"
+            className="league-gothic-heading"
+            gutterBottom
+            sx={{
+              textDecoration: 'bold',
+              textTransform: 'uppercase',
+              fontSize: {
+                xs: '60px',
+                md: '200px'
+              }
+            }}
+            style={{
+              fontWeight: 'bolder',
+              color: '#FFFFFF',
+            }}
+          >
+            Playlisting
+          </Typography>
+          <Typography
+            variant="h1"
+            className="league-gothic-heading"
+            gutterBottom
+            sx={{
+              textDecoration: 'bold',
+              textTransform: 'uppercase',
+              marginTop: {
+                xs: '-30px',
+                md: '-110px'
+              },
+              fontSize: {
+                xs: '60px',
+                md: '200px'
+              }
+            }}
+            style={{
+              fontWeight: 'bolder',
+              color: '#FFFFFF'
+            }}
+          >
+            SHOULDNT BE HARD
+          </Typography>
+          <Typography
+            variant="h2"
+            className="lora-subheading"
+            gutterBottom
+            sx={{
+              textDecoration: 'bold',
+              marginTop: {
+                md: '-80px',
+                xs: '-20px'
+              },
+              marginBottom: {
+                md: '20px'
+              },
+              fontSize: {
+                md: '40px',
+                xs: '12px'
+              }
+            }}
+            style={{
+              fontWeight: 'bolder',
+              color: '#FFFFFF',
+            }}
+          >
+            Create your personalized Spotify playlist effortlessly
+          </Typography>
+        </Box>
         <Box sx={{
-          width: '50%',
+          width: {
+            xs: '70%',
+            md: '50%'
+          },
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
+          paddingTop: '80px'
         }}>
-          <TextField
-            label="Enter songs"
-            placeholder='Let it be, Hotel California'
-            variant="outlined"
-            value={songQuery}
-            onChange={(e) => handleSongQueryUpdate(e.target.value)}
-            fullWidth
-            sx={{
-              '& .MuiOutlinedInput-root': {
-                borderRadius: '32px',
-              },
-              px: 0,
-            }}
-          />
-          <Button
+          <SongInput inputFunction={handleSongQueryUpdate} />
+           <Button
             className='space-mono-bold'
             sx={{
               my: 2,
-              px: 2,
               backgroundColor: '#3bb371',
               color: '#e0feca',
-              width: '10',
-              fontSize: 24
+              fontSize: {
+                xs: 12,
+                md: 24
+              }
             }}
             onClick={() => handleCreatePlaylist()}
           >
@@ -94,14 +173,15 @@ const HomePage: React.FC = () => {
       <Paper
         elevation={3}
         sx={{
-          height: '41vh',
+          height: '50vh',
           display: 'flex',
           alignItems: 'center',
-          backgroundImage: 'url(https://i.ibb.co/KxdmKW41/bg2.jpg)', // Ipod one
+          backgroundImage: 'url("/backgrounds/about_bg.png")', // net one
           backgroundSize: 'cover',
           backgroundPosition: 'left',
           backgroundRepeat: 'no-repeat'
         }}
+        className='no-border'
       >
         <AboutUs />
       </Paper>

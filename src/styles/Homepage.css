@@ -1,23 +1,27 @@
-.space-mono-regular {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
+.league-gothic-heading {
+  font-family: "League Gothic", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
 }
 
-.space-mono-bold {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-style: normal;
+.lora-subheading {
+  font-family: "Lora", serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
 }
 
-.space-mono-regular-italic {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: italic;
+.open-sans-sidebar {
+  font-family: "Open Sans", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-variation-settings:
+    "wdth" 100 !important;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3) !important; /* white shadow, subtle */
 }
 
-.space-mono-bold-italic {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-style: italic;
+.no-border {
+  border-radius: 0% !important;
 }

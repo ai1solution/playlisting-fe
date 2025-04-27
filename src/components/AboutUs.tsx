@@ -18,11 +18,20 @@ const AboutUs: React.FC = () => {
         color: '#FFFFFF'
       }}
     >
-      <Typography variant="h5" gutterBottom sx={{textDecoration: 'underline'}}>
+      <Typography
+        variant="h5"
+        gutterBottom
+        sx={{
+          marginBottom: 5
+        }}
+      >
         About Us
       </Typography>
 
-      <Typography variant="body2">
+      <Typography
+        variant="body2"
+        color='#adb0b3'
+      >
         About Writing effectively is an art. Start by using simple,
         everyday words people can easily understand. Be
         clear and direct to the point. Keep your thoughts
