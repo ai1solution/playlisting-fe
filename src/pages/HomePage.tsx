@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
         className='no-border'
         sx={{
           height: {
-            xs: '85vh',
+            xs: 800,
             md: '100vh'
           },
           display: 'flex',
@@ -178,7 +178,7 @@ const HomePage: React.FC = () => {
       <Paper
         elevation={3}
         sx={{
-          height: '50vh',
+          height: 500,
           display: 'flex',
           alignItems: 'center',
           backgroundImage: 'url("/backgrounds/about_bg.png")',

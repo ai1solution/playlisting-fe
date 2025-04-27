@@ -9,6 +9,9 @@ const AboutUs: React.FC = () => {
           xs: '90%', // full width on small screens
           md: '30%',  // half width on medium+ screens
         },
+        marginTop: {
+          xs: 10,
+        },
         paddingLeft: {
           xs: 5,
           md: 15,
