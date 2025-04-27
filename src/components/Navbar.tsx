@@ -10,18 +10,13 @@ import {
   SvgIcon
 } from '@mui/material';
 import '../styles/Navbar.css';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import TemporaryDrawer from './TemporaryDrawer';
 
 // Custom Home icon using SvgIcon
 const HomeIcon = () => (
   <SvgIcon>
     <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
   </SvgIcon>
-);
-
-// Custom Info/About icon using SvgIcon
-const ProfileIcon = () => (
-  <AccountCircleIcon fontSize='large' style={{ color: '#3bb371' }}/>
 );
 
 const Navbar: React.FC = () => {
@@ -64,15 +59,7 @@ const Navbar: React.FC = () => {
         
         {/* Right side with About icon */}
         <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
-          <IconButton
-            color="inherit"
-            component={RouterLink}
-            to="/profile"
-            edge="end"
-            aria-label="profile"
-          >
-            <ProfileIcon />
-          </IconButton>
+          <TemporaryDrawer />
         </Box>
       </Toolbar>
     </AppBar>
