@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
         }
       });
       setPlaylistLink(response.data.playlist_href)
-      setPlaylistName(response.data.name)
+      setPlaylistName(response.data.playlist_name)
       console.log(response.data);
     } catch (error) {
       console.error('Error:', error);
