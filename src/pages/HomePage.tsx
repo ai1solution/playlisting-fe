@@ -70,10 +70,7 @@ const HomePage: React.FC = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: {
-              xs: '150px',
-              md: '-100px'
-            }
+            marginTop: 10
           }}
         >
           <Typography
