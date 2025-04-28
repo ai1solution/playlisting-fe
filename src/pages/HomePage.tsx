@@ -85,7 +85,7 @@ const HomePage: React.FC = () => {
               textTransform: 'uppercase',
               fontSize: {
                 xs: '60px',
-                md: '200px'
+                lg: '120px'
               }
             }}
             style={{
@@ -104,11 +104,11 @@ const HomePage: React.FC = () => {
               textTransform: 'uppercase',
               marginTop: {
                 xs: '-30px',
-                md: '-110px'
+                lg: '-60px'
               },
               fontSize: {
                 xs: '60px',
-                md: '200px'
+                lg: '120px'
               }
             }}
             style={{
@@ -125,15 +125,15 @@ const HomePage: React.FC = () => {
             sx={{
               textDecoration: 'bold',
               marginTop: {
-                md: '-80px',
-                xs: '-20px'
+                xs: '-20px',
+                lg: '-40px',
               },
               marginBottom: {
                 md: '20px'
               },
               fontSize: {
-                md: '40px',
-                xs: '12px'
+                xs: '12px',
+                lg: '20px'
               }
             }}
             style={{
