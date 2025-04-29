@@ -9,7 +9,7 @@ const SongInput: React.FC<SongInputProps> = ({ inputFunction }) => {
   return (
     <TextField
       label="Enter your mood"
-      placeholder="Sad 90's bollywood, hip hop like Michael Jackson, hard hitting Indie like Anuv Jain"
+      placeholder="Sad 90's bollywood, Party hip hop, Hard hitting Indie, ..."
       onChange={inputFunction}
     //   variant="outlined"
       variant="filled"
