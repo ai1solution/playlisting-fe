@@ -8,8 +8,8 @@ interface SongInputProps {
 const SongInput: React.FC<SongInputProps> = ({ inputFunction }) => {
   return (
     <TextField
-      label="Enter songs"
-      placeholder="Let it be, Hotel California"
+      label="Enter your mood"
+      placeholder="Sad 90's bollywood, hip hop like Michael Jackson, hard hitting Indie like Anuv Jain"
       onChange={inputFunction}
     //   variant="outlined"
       variant="filled"
