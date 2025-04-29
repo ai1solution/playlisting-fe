@@ -35,17 +35,18 @@ const AboutUs: React.FC = () => {
         variant="body2"
         color='#adb0b3'
       >
-        About Writing effectively is an art. Start by using simple,
-        everyday words people can easily understand. Be
-        clear and direct to the point. Keep your thoughts
-        flowing logically, and aim for brevity unless you’re
-        writing in the long form.
-        Your ideas have a purpose so choose words that
-        accurately express them. Ensure your grammar is
-        flawless as it impacts your credibility. Use the
-        active voice whenever possible as it makes any
-        narrative easier to read.
+        We’re a couple of tech and music enthusiasts on a mission to make playlist creation effortless. Tired of generic mixes and endless scrolling, we built a smarter way to create personalized Spotify playlists that match your mood, moment, or vibe—fast.
+        Our platform blends a love for music with simple, smart technology to help you discover tracks you’ll love without the hassle. Whether you're getting ready for a workout, hosting friends, or just relaxing, we make finding the perfect soundtrack easy.
+        Let us handle the playlist—so you can focus on enjoying the music.
       </Typography>
+      <br/>
+      <Typography
+        variant="body2"
+        color='#adb0b3'
+      >
+        Contact us @ aionesolution07@gmail.com
+      </Typography>
+
     </Box>
   );
 };
