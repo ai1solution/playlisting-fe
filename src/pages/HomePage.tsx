@@ -1,11 +1,11 @@
 import React from 'react';
-import { Typography, Box, Paper, Button } from '@mui/material';
+import { Typography, Box, Paper, Button, Stack } from '@mui/material';
 import '../styles/Homepage.css';
 import axios from 'axios';
 import { useState } from 'react';
 import LinkBoxWithCopy from '../components/LinkBoxWithCopy'
 import AboutUs from "../components/AboutUs"
-import CircularProgress from '@mui/material/CircularProgress';
+import LinearProgress from '@mui/material/LinearProgress';
 import SongInput from "../components/SongInput";
 import AdSense from 'react-adsense';
 
@@ -178,7 +178,12 @@ const HomePage: React.FC = () => {
             PLAYLIST IT
           </Button>
           {playlistLink && <LinkBoxWithCopy url={playlistLink} name={playlistName}/>}
-          {loading && <CircularProgress />}
+          {
+            loading &&
+            <Stack sx={{ width: '100%', color: 'grey.500' }} spacing={2}>
+              <LinearProgress color="secondary" />
+            </Stack>
+          }
         </Box>
       </Paper>
       <Paper
