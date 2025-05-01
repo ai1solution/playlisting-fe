@@ -7,6 +7,7 @@ import LinkBoxWithCopy from '../components/LinkBoxWithCopy'
 import AboutUs from "../components/AboutUs"
 import CircularProgress from '@mui/material/CircularProgress';
 import SongInput from "../components/SongInput";
+import AdSense from 'react-adsense';
 
 const HomePage: React.FC = () => {
   const [songQuery, setSongQuery] = useState("");
@@ -39,6 +40,13 @@ const HomePage: React.FC = () => {
 
   return (
     <>
+      <AdSense.Google
+        client="ca-pub-3640737521870113" // Replace with your AdSense publisher ID
+        slot="5071120975"                // Replace with your ad slot ID
+        style={{ display: 'block' }}
+        format="auto"
+        responsive="true"
+      />
       <Paper
         elevation={3}
         className='no-border'
@@ -186,7 +194,7 @@ const HomePage: React.FC = () => {
         className='no-border'
       >
         <AboutUs />
-      </Paper>
+      </Paper> 
     </>
   );
 };
