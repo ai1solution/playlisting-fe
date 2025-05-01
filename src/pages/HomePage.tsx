@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
   }
 
   const handleCreatePlaylistV2 = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.keyCode == 13) {
+    if (event.keyCode === 13) {
       console.log("enter key pressed");
       handleCreatePlaylist();
     }
