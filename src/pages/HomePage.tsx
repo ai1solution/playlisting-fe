@@ -38,6 +38,14 @@ const HomePage: React.FC = () => {
     setLoading(false);
   }
 
+  const handleCreatePlaylistV2 = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.keyCode == 13) {
+      console.log("enter key pressed");
+      handleCreatePlaylist();
+    }
+    console.log("other key pressed");
+  }
+
   return (
     <>
       <Paper
@@ -153,7 +161,7 @@ const HomePage: React.FC = () => {
           alignItems: 'center',
           paddingTop: '40px'
         }}>
-          <SongInput inputFunction={handleSongQueryUpdate} />
+          <SongInput inputFunction={handleSongQueryUpdate} submitFunction={handleCreatePlaylistV2} />
            <Button
             className='space-mono-bold'
             sx={{

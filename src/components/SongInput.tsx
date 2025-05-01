@@ -3,11 +3,13 @@ import { TextField } from "@mui/material";
 
 interface SongInputProps {
     inputFunction: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    submitFunction: (event: React.KeyboardEvent<HTMLInputElement>) => void;
 }
 
-const SongInput: React.FC<SongInputProps> = ({ inputFunction }) => {
+const SongInput: React.FC<SongInputProps> = ({ inputFunction, submitFunction }) => {
   return (
     <TextField
+      onKeyDown={submitFunction}
       label="Enter your mood"
       placeholder="Sad 90's bollywood, Party hip hop, Hard hitting Indie, ..."
       onChange={inputFunction}
