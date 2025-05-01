@@ -152,7 +152,7 @@ const HomePage: React.FC = () => {
         </Box>
         <Box sx={{
           width: {
-            xs: '70%',
+            xs: '80%',
             md: '50%'
           },
           display: 'flex',
