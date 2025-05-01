@@ -10,6 +10,8 @@ interface LinkBoxWithCopyProps {
 const LinkBoxWithCopy: React.FC<LinkBoxWithCopyProps> = ({ url, name }) => {
   const [copied, setCopied] = useState(false);
 
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(url);
@@ -49,7 +51,7 @@ const LinkBoxWithCopy: React.FC<LinkBoxWithCopyProps> = ({ url, name }) => {
             marginRight: 1,
           }}
         >
-          {name}
+          {isMobile ? name.substring(0,30) : name}
         </Typography>
 
         <Tooltip title="Copy to clipboard">
