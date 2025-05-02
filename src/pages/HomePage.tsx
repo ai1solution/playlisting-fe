@@ -7,7 +7,7 @@ import LinkBoxWithCopy from '../components/LinkBoxWithCopy'
 import AboutUs from "../components/AboutUs"
 import LinearProgress from '@mui/material/LinearProgress';
 import SongInput from "../components/SongInput";
-import AdSense from 'react-adsense';
+// import AdSense from 'react-adsense';
 import RandomTextDisplay from '../components/RandomTextDisplay'
 
 const HomePage: React.FC = () => {
