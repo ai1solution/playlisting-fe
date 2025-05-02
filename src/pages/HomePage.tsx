@@ -261,7 +261,7 @@ const HomePage: React.FC = () => {
       >
         <AboutUs />
       </Paper>
-      <Paper>
+      {/* <Paper>
         <AdSense.Google
           client="ca-pub-3640737521870113" // Replace with your AdSense publisher ID
           slot="5071120975"                // Replace with your ad slot ID
@@ -269,7 +269,7 @@ const HomePage: React.FC = () => {
           format="auto"
           responsive="true"
         />
-      </Paper>
+      </Paper> */}
     </>
   );
 };
